@@ -1,0 +1,47 @@
+{
+  "name": "sindarin",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.0.0",
+  "publisher": "goSiqueira",
+  "author": "Guilherme Oliveira Siqueira",
+  "license": "MIT",
+  "engines": {
+    "vscode": "0.10.x"
+  },
+  "scripts": {
+    "update-grammar": "node ../node_modules/vscode-grammar-updater/bin dotnet/csharp-tmLanguage grammars/csharp.tmLanguage ./syntaxes/csharp.tmLanguage.json"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "sindarin",
+        "extensions": [
+          ".sin"
+        ],
+        "aliases": [
+          "Sin",
+          "sindarin"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sindarin",
+        "scopeName": "source.sin",
+        "path": "./syntaxes/sindarin.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sindarin",
+        "path": "./snippets/sindarin.code-snippets"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guilhermeolisi/sindarin-grammar.git"
+  }
+}

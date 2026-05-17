@@ -1,0 +1,17 @@
+{
+	"registrations": [
+		{
+			"component": {
+				"type": "git",
+				"git": {
+					"name": " guilhermeolisi/sindarin-tmLanguage",
+					"repositoryUrl": "https://github.com/guilhermeolisi/sindarin-tmLanguage.git",
+				}
+			},
+			"license": "MIT",
+			"version": "0.1.0",
+			"description": "The file syntaxes/csharp.tmLanguage.json was derived from https://github.com/dotnet/csharp-tmLanguage"
+		}
+	],
+	"version": 1
+}

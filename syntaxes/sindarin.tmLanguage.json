@@ -1,0 +1,218 @@
+{
+  "information_for_contributors": [
+    ""
+  ],
+  "version": "",
+  "name": "sindarin",
+  "scopeName": "source.sin",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#variable-declaration"
+    },
+    {
+      "include": "#object-declaration"
+    },
+    {
+      "include": "#words"
+    },
+    {
+      "include": "#restrain"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.block.documentation.sin",
+          "begin": "\\{",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.sin"
+            }
+          },
+          "end": "\\}",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.sin"
+            }
+          }
+        },
+        {
+          "begin": "(^\\s+)?(?=//)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.sin"
+            }
+          },
+          "end": "(?=$)",
+          "patterns": [
+            {
+              "name": "comment.line.double-slash.sin",
+              "begin": "//",
+              "beginCaptures": {
+                "0": {
+                  "name": "punctuation.definition.comment.sin"
+                }
+              },
+              "end": "(?=$)"
+            }
+          ]
+        }
+      ]
+    },
+    "words": {
+      "patterns": [
+        {
+          "include": "#string"
+        },
+        {
+          "include": "#boolean"
+        },
+        {
+          "include": "#number"
+        },
+        {
+          "include": "#number-fit"
+        },
+        {
+          "include": "#operator"
+        },
+        {
+          "include": "#function"
+        }
+      ]
+    },
+    "string": {
+      "name": "string.quoted.double.sin",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.sin"
+        }
+      },
+      "end": "(\")|(?:([^\\\\\\n])$)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.sin"
+        },
+        "2": {
+          "name": "invalid.illegal.newline.sin"
+        }
+      }
+    },
+    "boolean": {
+      "name": "constant.language.sin",
+      "match": "(?i)(?:\\b)(true|false)(?:\\b)"
+    },
+    "number": {      
+        "name": "constant.sin",
+        "match": "(?i)(?:(?<![a-z0-9])(?=([0-9]|\\-|\\+))(?<!@))(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"    
+    },
+    "number-fit": {
+      "name": "entity.name.type.struct.sin",
+      "match": "(?i)(?:(?<![a-z0-9@]))@(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"
+    },
+    "operator": {
+      "patterns": [
+        {
+          "name": "keyword.symbol.sin",
+          "match": "(\\+|\\-|\\*|\\/|\\^|\\(|\\)|\\[|\\])"
+        }
+      ]
+    },
+    "restrain": {
+      "patterns": [
+        {
+          "name": "entity.name.variable.property.sin",
+          "match": "(?i)(?:\\b)(min|max)(?:\\b)"
+        }
+      ]
+    },
+    "variable-initializer": {
+      "name": "keyword.operator.assignment.sin",
+      "match": "(?<!=|!)(=)(?!=|>)"
+    },
+    "variable-declaration": {
+      "match": "(?i)([a-z_][a-z_0-9]*)(\\{[^\\{\\}]*?\\})?(?: |\t)*(=)",
+      "captures": {
+        "1": {
+          "name": "entity.name.variable.parameter.sin"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#comment"
+            }
+          ]
+        },
+        "3": {
+          "patterns": [
+            {
+              "include": "#variable-initializer"
+            }
+          ]
+        }
+      }
+    },
+    "object-declaration": {
+      "begin": "(?i)^(?: |\\t)*([a-z_][a-z_0-9]*)(?<=[a-z0-9_])(?![a-z0-9_\\{]|( |\t)*=)",
+      "beginCaptures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#class-list"
+            },
+            {
+              "include": "#property-list"
+            }
+          ]
+        }
+      },
+      "end": "(?=//|$)",
+      "patterns": [
+        {
+          "include": "#variable-declaration"
+        },
+        {
+          "include": "#words"
+        },
+        {
+          "include": "#comment"
+        },
+        {
+          "include": "#enum-list"
+        }
+      ]
+    },
+    "class-list": {
+      "name": "storage.type.sin",
+      "match": "(?i)(?:\\b)(calculation|penality|experimental|capillary|shiftpolynomialtan|excluderegion|chebyshev|cosinefourier|debyelike|function|functionpsvoigt|logistic|functionarctangent|interpolation|inverse|polynomial|polynomialclassic|scatteringfactor|phase|peakxi|marchdollase|ellipsoidal|cell|reflectionhkl|radiation|profilefunction|profilefunctionft|gauss|lorentz|psvoigt|split|voigt|gausswavelength|lorentzwavelength|voigtwavelength|psvoigtwavelength|voigtiansize|voigtianstrain|shparameters|inverseprofile|box|circle|exponential|axialdivergence|defocusing|equatorialdivergence|receivingslitwidth|targetwidth|tilt|transparency|sizedistribution|fault|dislocation|dislocationpopa|microstrainpah|microstrainwuah|dislocationshift|shiftft|simulation|interval|data|datasimulation|reflectionxi|backgroundfile|posphericalharmonic)(?:\\b)"
+    },
+    "property-list": {
+      "name": "entity.name.variable.property.sin",
+      "match": "(?i)(?:\\b)(cycles|derivationbothside|useanomalousscattering|stabilization|rapidyrecalcule|calculeprofileinpeak|dynamiclambda|managehighcorrelation|highcorrelationlimit|enableintensity|enableshift|fftresolution|profilesmax|convolutionxmax|profilexmax|cutoff|zero|displacement|monochromatortwotheta|polarization|variableslit|incidentangle|specimenthickness|absoprtionfunction|scale|shift|multiplicity|z|convolutiontype|shape|direction|width|meanstandarddeviation|type|angulardependency|centeredinmiddle|specimenangle|weight)(?:\\b)"
+    },
+    "enum-list": {
+      "name": "entity.name.type.enum.sin",
+      "match": "(?i)(?:\\b)(null|none|marquardt|damping|fft|numerical|sphere|marchdollase|ellipsoidal|cylinder|cube|tetrahedron|octahedron|jarvinen|lognormal|gamma|york|unit|inversey|inversee|weight|sinlike|quadraticlike|fpalike)(?:\\b)"
+    },
+    "function": {
+      "begin": "(?i)(?:\\b)([a-z_][a-z0-9_]*)(?=\\()",
+      "begin-Captures": {
+        "1": {
+          "name": "entity.name.function.sin"
+        }
+      },
+      "end": "(?=\\))",
+      "patterns": [
+        {
+          "include": "#words"
+
+        }
+      ]
+    }
+  }
+}
