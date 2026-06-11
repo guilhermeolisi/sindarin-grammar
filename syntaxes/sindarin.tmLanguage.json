@@ -108,12 +108,32 @@
       "match": "(?i)(?:\\b)(true|false)(?:\\b)"
     },
     "number": {      
-        "name": "constant.sin",
-        "match": "(?i)(?:(?<![a-z0-9])(?=([0-9]|\\-|\\+))(?<![@!]))(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"    
+        "patterns": [
+            {
+                "comment": "Decimal não-refinável marcado com # (aparência própria no editor)",
+                "name": "constant.fixed.sin",
+                "match": "(?i)(?<![a-z0-9#])#(?=[0-9]|\\-|\\+)(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"
+            },
+            {
+                "comment": "Número decimal normal",
+                "name": "constant.sin",
+                "match": "(?i)(?<![a-z0-9#@!])(?=[0-9]|\\-|\\+)(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"
+            }
+        ]    
     },
     "number-fit": {
-      "name": "entity.name.type.struct.sin",
-      "match": "(?i)(?:(?<![a-z0-9@!]))(@|!)(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"
+      "patterns": [
+        {
+          "comment": "Variável geral @",
+          "name": "entity.name.type.struct.sin",
+          "match": "(?i)(?<![a-z0-9@!])@(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"
+        },
+        {
+          "comment": "Variável onebyone ! (aparência própria no editor)",
+          "name": "entity.name.type.struct.onebyone.sin",
+          "match": "(?i)(?<![a-z0-9@!])!(\\+|\\-)?[0-9]+((\\.([0-9]+([E][+-]??[0-9]+)?)?)|([E][+-]??[0-9]+))?"
+        }
+      ]
     },
     "operator": {
       "patterns": [
