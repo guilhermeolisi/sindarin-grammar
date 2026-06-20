@@ -209,15 +209,15 @@
     },
     "class-list": {
       "name": "storage.type.sin",
-      "match": "(?i)(?:\\b)(calculation|penality|experimental|capillary|shiftpolynomialtan|excluderegion|chebyshev|cosinefourier|debyelike|function|functionpsvoigt|logistic|functionarctangent|interpolation|inverse|polynomial|polynomialclassic|scatteringfactor|phase|peakxi|marchdollase|ellipsoidal|cell|reflectionhkl|radiation|profilefunction|profilefunctionft|gauss|lorentz|psvoigt|split|voigt|gausswavelength|lorentzwavelength|voigtwavelength|psvoigtwavelength|voigtiansize|voigtianstrain|shparameters|inverseprofile|box|circle|exponential|axialdivergence|defocusing|equatorialdivergence|receivingslitwidth|targetwidth|tilt|transparency|sizedistribution|fault|dislocation|dislocationpopa|microstrainpah|microstrainwuah|dislocationshift|shiftft|simulation|interval|data|datasimulation|reflectionxi|backgroundfile|posphericalharmonic)(?:\\b)"
+      "match": "(?i)(?:\\b)(calculation|experimental|capillary|shiftpolynomialtan|excluderegion|backgroundfile|chebyshev|cosinefourier|debyelike|function|interpolation|inverse|polynomial|cagliotifwhm|logistic|functionarctangent|scatteringfactor|phase|peakxi|reflectionxi|marchdollase|ellipsoidal|posphericalharmonic|cell|uanis|reflectionhkl|radiation|profilefunction|profilefunctionft|gauss|lorentz|psvoigt|split|voigt|gausswavelength|lorentzwavelength|voigtwavelength|psvoigtwavelength|voigtiansize|voigtianstrain|shiftft|inverseprofile|circle|box|exponential|axialdivergence|defocusing|equatorialdivergence|receivingslitwidth|targetwidth|tilt|transparency|sizedistribution|fault|dislocation|dislocationpopa|microstrainpah|microstrainwuah|simulation|interval|data|datasimulation|atomsymbol|dislocationshift|shparameters|transformuisotouanis)(?:\\b)"
     },
     "property-list": {
       "name": "entity.name.variable.property.sin",
-      "match": "(?i)(?:\\b)(cycles|derivationbothside|useanomalousscattering|stabilization|rapidyrecalcule|calculeprofileinpeak|dynamiclambda|managehighcorrelation|highcorrelationlimit|enableintensity|enableshift|fftresolution|profilesmax|convolutionxmax|profilexmax|cutoff|zero|displacement|monochromatortwotheta|polarization|variableslit|incidentangle|specimenthickness|absoprtionfunction|scale|shift|multiplicity|z|convolutiontype|shape|direction|width|meanstandarddeviation|type|angulardependency|centeredinmiddle|specimenangle|weight)(?:\\b)"
+      "match": "(?i)(?:\\b)(cycles|derivationbothside|stabilization|rapidyrecalcule|calculeprofileinpeak|dynamiclambda|managehighcorrelation|highcorrelationlimit|enableintensity|enableshift|centeredinmidddle|cutoff|zero|displacement|monochromatortwotheta|polarization|variableslit|incidentangle|specimenthickness|specimenthicknessmuabs|absoprtionfunction|useanomalousscattering|fftresolution|profilesmax|profilexmax|scale|weight|alpha|shift|multiplicity|z|convolutiontype|angulardependency|shape|direction|width|distributiontype|meanstandarddeviation)(?:\\b)"
     },
     "enum-list": {
       "name": "entity.name.type.enum.sin",
-      "match": "(?i)(?:\\b)(null|none|marquardt|damping|fft|numerical|sphere|marchdollase|ellipsoidal|cylinder|cube|tetrahedron|octahedron|jarvinen|lognormal|gamma|york|unit|inversey|inversee|weight|sinlike|quadraticlike|fpalike)(?:\\b)"
+      "match": "(?i)(?:\\b)(null|none|marquardt|damping|fft|numerical|sphere|ellipsoidal|marchdollase|cylinder|cube|tetrahedron|octahedron|jarvinen|lognormal|gamma|york|unit|inversey|inversee|weight|sinlike|quadraticlike|fpalike|bfgs)(?:\\b)"
     },
     "function": {
       "begin": "(?i)(?:\\b)([a-z_][a-z0-9_]*)(?=\\()",
