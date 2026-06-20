@@ -10,7 +10,7 @@ using SindarinGrammarSync;
 
 #if DEBUG
 args = [
-    "--check",
+    //"--check",
 ];
 #endif
 
