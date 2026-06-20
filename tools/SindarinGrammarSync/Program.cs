@@ -8,6 +8,12 @@ using SindarinGrammarSync;
 // As demais seções da gramática (comment/string/number/operator/...) são estáticas.
 // -----------------------------------------------------------------------------
 
+#if DEBUG
+args = [
+    "--check",
+];
+#endif
+
 var options = CliOptions.Parse(args);
 if (options.ShowHelp)
 {
