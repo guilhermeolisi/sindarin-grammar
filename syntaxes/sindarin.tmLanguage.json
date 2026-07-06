@@ -213,7 +213,7 @@
     },
     "property-list": {
       "name": "entity.name.variable.property.sin",
-      "match": "(?i)(?:\\b)(cycles|derivationbothside|stabilization|rapidyrecalcule|calculeprofileinpeak|dynamiclambda|managehighcorrelation|highcorrelationlimit|structurefactorthreshold|finalpolish|enableintensity|enableshift|centeredinmidddle|cutoff|zero|displacement|monochromatortwotheta|monochromator|polarization|variableslit|incidentangle|specimenthickness|specimenthicknessmuabs|absoprtionfunction|useanomalousscattering|fftresolution|profilesmax|profilexmax|scale|weight|alpha|shift|multiplicity|z|bins|convolutiontype|angulardependency|shape|direction|width|relativemu|distributiontype|meanstandarddeviation)(?:\\b)"
+      "match": "(?i)(?:\\b)(cycles|derivationbothside|stabilization|rapidyrecalcule|calculeprofileinpeak|dynamiclambda|managehighcorrelation|highcorrelationlimit|structurefactorthreshold|finalpolish|enableintensity|enableshift|centeredinmidddle|cutoff|zero|displacement|monochromatortwotheta|monochromator|polarization|variableslit|incidentangle|specimenthickness|specimenthicknessmuabs|absorptionfunction|useanomalousscattering|fftresolution|profilesmax|profilexmax|scale|weight|alpha|shift|multiplicity|z|bins|convolutiontype|angulardependency|shape|direction|width|relativemu|distributiontype|meanstandarddeviation)(?:\\b)"
     },
     "enum-list": {
       "name": "entity.name.type.enum.sin",
