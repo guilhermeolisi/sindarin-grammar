@@ -4,3 +4,7 @@ node_modules/
 tools/**/bin/
 tools/**/obj/
 
+# Estado local do Visual Studio (.suo, caches de design-time, MRU)
+.vs/
+tools/**/.vs/
+
