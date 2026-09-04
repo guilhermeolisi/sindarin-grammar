@@ -8,3 +8,7 @@ tools/**/obj/
 .vs/
 tools/**/.vs/
 
+
+# Worktrees do Claude Code: checkouts descartaveis, nunca versionar
+.claude/worktrees/
+.claude/settings.local.json
