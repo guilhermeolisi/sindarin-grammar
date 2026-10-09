@@ -213,7 +213,7 @@
     },
     "property-list": {
       "name": "entity.name.variable.property.sin",
-      "match": "(?i)(?:\\b)(cycles|derivationbothside|stabilization|rapidyrecalcule|calculeprofileinpeak|dynamiclambda|managehighcorrelation|highcorrelationlimit|structurefactorthreshold|finalpolish|collinearityanalysis|restraintweight|enableintensity|enableshift|centeredinmiddle|cutoff|zero|displacement|monochromatortwotheta|monochromator|polarization|variableslit|incidentangle|specimenthickness|specimenthicknessmuabs|absorptionfunction|useanomalousscattering|fftresolution|profilexmax|convolutionxmax|convolutionsmax|weightpoint|scale|k|specimenangle|nox|shift|multiplicity|z|convolutiontype|angulardependency|shape|direction|seconddirection|width|tau|ksphere|relativemu|distributiontype|meanstandarddeviation|isrelativeparameters)(?:\\b)"
+      "match": "(?i)(?:\\b)(cycles|derivationbothside|stabilization|rapidyrecalcule|calculeprofileinpeak|dynamiclambda|managehighcorrelation|highcorrelationlimit|structurefactorthreshold|finalpolish|collinearityanalysis|restraintweight|enableintensity|enableshift|centeredinmiddle|cutoff|zero|displacement|monochromatortwotheta|monochromator|polarization|variableslit|incidentangle|specimenthickness|specimenthicknessmuabs|absorptionfunction|useanomalousscattering|fftresolution|profilexmax|convolutionxmax|convolutionsmax|weightpoint|scale|k|specimenangle|nox|shift|multiplicity|z|convolutiontype|angulardependency|shape|direction|seconddirection|width|tau|ksphere|relativemu|distributiontype|meanstandarddeviation|isrelativeparameters|temperature|usystematic)(?:\\b)"
     },
     "enum-list": {
       "name": "entity.name.type.enum.sin",
